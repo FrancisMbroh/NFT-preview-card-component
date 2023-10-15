@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: hanken, roboto, raleway, archivo;
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+
+.card {
+  width: 350px;
+  background-color: rgb(8, 8, 34);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.card-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.img-1 {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.img-2-div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 173, 173, 0.5);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: transform 0.8s ease;
+
+  transform-origin: bottom center;
+  opacity: 0;
+  border-radius: 5px;
+}
+.img-2-div:hover {
+  opacity: 1;
+}
+.img-2 {
+  width: 10%;
+  position: relative;
+  left: 46%;
+  top: 45%;
+  transform: translateY(25px);
+  transition: transform 0.8s ease-in-out;
+}
+.img-2:hover {
+  transform: translateY(0px);
+}
+
+.card-img img:hover {
+  cursor: pointer;
+}
+
+.name {
+  margin: 20px 0;
+  font-size: 1.6rem;
+  color: white;
+}
+.name:hover {
+  color: aqua;
+}
+
+.description {
+  line-height: 1.4;
+  color: rgb(138, 132, 132);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.value {
+  color: aqua;
+  font-weight: 600;
+  display: flex;
+}
+.value img,
+.timer img {
+  margin-right: 5px;
+}
+
+.timer {
+  display: flex;
+  color: rgb(138, 132, 132);
+}
+hr {
+  margin: 15px 0;
+}
+.author {
+  display: flex;
+  gap: 15px;
+}
+.author img {
+  width: 11%;
+  height: 40px;
+  object-fit: cover;
+  border: 2px solid rgb(245, 245, 245);
+  border-radius: 50%;
+  align-self: center;
+}
+.author p {
+  display: flex;
+  gap: 10px;
+  align-self: center;
+  color: white;
+  font-size: 1.2rem;
+}
+.author p:hover {
+  color: aqua;
+}
+.creation-of {
+  color: rgb(138, 132, 132);
+}
+
+@media  screen and (max-width:370px) {
+    .wrapper {
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+    }
+    .card {
+        width: 300px;
+    }
+}
